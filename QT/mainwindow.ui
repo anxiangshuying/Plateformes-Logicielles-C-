@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>840</width>
+    <height>658</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gestion de RDV</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>851</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="affichierPersonnelSoinsTab">
+     <attribute name="title">
+      <string>Afficher personnel de soins</string>
+     </attribute>
+     <widget class="QLabel" name="listPersonnelLabel">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>20</y>
+        <width>451</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Liste de Personnel de soins</string>
+      </property>
+     </widget>
+     <widget class="QTreeView" name="personnelTreeView">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>70</y>
+        <width>801</width>
+        <height>371</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="deletePersonnelSoinsButton">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>460</y>
+        <width>191</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Supprimer Ressource</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="modifyPersonnelSoinsButton">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>460</y>
+        <width>191</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Modifier Ressource</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ViewButton">
+      <property name="geometry">
+       <rect>
+        <x>661</x>
+        <y>20</y>
+        <width>151</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Load TreeList</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="addRadiologueButton_2">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>460</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Add Radiologue</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="rechercherPatientTab">
+     <attribute name="title">
+      <string>Rechercher Patient</string>
+     </attribute>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>150</y>
+        <width>41</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Date</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="patientNomLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>110</y>
+        <width>151</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="patientPrenomLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>110</y>
+        <width>151</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="rdvStartDateEdit">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>150</y>
+        <width>151</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="dateTime">
+       <datetime>
+        <hour>0</hour>
+        <minute>0</minute>
+        <second>0</second>
+        <year>1900</year>
+        <month>1</month>
+        <day>1</day>
+       </datetime>
+      </property>
+      <property name="displayFormat">
+       <string notr="true">yyyy/M/d</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="patientIdRadio">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>190</y>
+        <width>251</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Numéro d'identification</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="patientTableView">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>310</y>
+        <width>801</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="patientNomRadio">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>311</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nom,prénom,date de rendez-vous</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>110</y>
+        <width>31</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nom</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_24">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Recherchez par </string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="searchPatientButton">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>230</y>
+        <width>112</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Rechercher</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>230</y>
+        <width>31</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ID</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>280</y>
+        <width>471</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Les information du patient que vous recherchez sont:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>110</y>
+        <width>81</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Prénom</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="patientIdLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>230</y>
+        <width>151</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>150</y>
+        <width>21</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>du</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>150</y>
+        <width>21</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>au</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="rdvEndDateEdit">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>150</y>
+        <width>151</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="dateTime">
+       <datetime>
+        <hour>0</hour>
+        <minute>0</minute>
+        <second>0</second>
+        <year>1900</year>
+        <month>1</month>
+        <day>1</day>
+       </datetime>
+      </property>
+      <property name="displayFormat">
+       <string notr="true">yyyy/M/d</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="deletePatientButton">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>460</y>
+        <width>181</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Supprimer Patient</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="modifyPatientButton">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>460</y>
+        <width>181</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Modifier Patient</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ExporterPatient">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>460</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Exporter Patient</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Planification</string>
+     </attribute>
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>100</y>
+        <width>461</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Le personnel de soins qui sont disponibles sont:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>361</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Choisissez une date pour le rendez-vous:</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="personnelTableView">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>140</y>
+        <width>801</width>
+        <height>351</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="planifierButton">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>30</y>
+        <width>112</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Planifier</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="planificationDateEdit">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>30</y>
+        <width>121</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="dateTime">
+       <datetime>
+        <hour>0</hour>
+        <minute>0</minute>
+        <second>0</second>
+        <year>1900</year>
+        <month>1</month>
+        <day>1</day>
+       </datetime>
+      </property>
+      <property name="displayFormat">
+       <string notr="true">yyyy/M/d</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>840</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <widget class="QMenu" name="menuAjouter">
+     <property name="title">
+      <string>Ajouter</string>
+     </property>
+     <property name="icon">
+      <iconset resource="Images.qrc">
+       <normaloff>:/new/prefix1/Images/AjouterIcon.png</normaloff>:/new/prefix1/Images/AjouterIcon.png</iconset>
+     </property>
+     <addaction name="actionPatient"/>
+     <addaction name="actionPersonnel_de_soins"/>
+    </widget>
+    <addaction name="menuAjouter"/>
+    <addaction name="actionQuitter"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>?</string>
+    </property>
+    <addaction name="actionA_propos"/>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionPatient"/>
+   <addaction name="actionPersonnel_de_soins"/>
+  </widget>
+  <action name="actionQuitter">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/new/prefix1/Images/quitterIcon.png</normaloff>:/new/prefix1/Images/quitterIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </action>
+  <action name="actionA_propos">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/new/prefix1/Images/AProposIcon.png</normaloff>:/new/prefix1/Images/AProposIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>A propos</string>
+   </property>
+  </action>
+  <action name="actionPatient">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/new/prefix1/Images/patientIcon.png</normaloff>:/new/prefix1/Images/patientIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Patient</string>
+   </property>
+  </action>
+  <action name="actionPersonnel_de_soins">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/new/prefix1/Images/personnelsoinsIcon.png</normaloff>:/new/prefix1/Images/personnelsoinsIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Personnel de soins</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="Images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
